@@ -1,5 +1,7 @@
 package br.com.alura.tdd;
 
+
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 public class CalculadoraTest {
@@ -7,8 +9,9 @@ public class CalculadoraTest {
     @Test
     public void deveriaSomarDoisNumerosPositivos(){
         Calculadora calc = new Calculadora();
-        calc.somar(3, 7);
+        int soma = calc.somar(3, 7);
 
+        Assertions.assertEquals(10 , soma);
 
     }
 }
